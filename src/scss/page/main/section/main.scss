@@ -1,0 +1,51 @@
+.page-main {
+}
+.main {
+  // .main__container
+  &__container {
+    padding-top: 47px;
+    padding-bottom: 37px;
+  }
+
+  // .main__body
+  &__body {
+    width: 50%;
+
+    @media (max-width: $tablet) {
+      width: 90%;
+    }
+  }
+
+  // .main__title
+
+  &__title {
+    @include adaptiveValue("font-size", 42, 25, 1239.98, 479.98, 1);
+    color: $mainColorTitle;
+    font-family: $fontFamilyThick;
+    line-height: math.div(56, 42);
+    margin-bottom: 6px;
+  }
+
+  // .main__desc
+
+  &__desc {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: math.div(26, 18);
+    margin-bottom: 36px;
+  }
+
+  // .main__button
+
+  &__button {
+  }
+}
+.button {
+  display: block;
+  font-family: $fontFamilyThick;
+  font-size: 14px;
+  color: #fff;
+  padding: 21px 26px 19px 26px;
+  background: radial-gradient(#fbaf43, #f09513);
+  border-radius: 15px;
+}

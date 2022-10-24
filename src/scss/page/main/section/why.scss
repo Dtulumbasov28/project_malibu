@@ -1,0 +1,191 @@
+.why {
+  background-image: url("@img/why-background-pc.jpg");
+  background-size: cover;
+
+  color: #fff;
+  padding-top: 87px;
+  padding-bottom: 280px;
+
+  @media (max-width: $mobileSmall) {
+    background-image: url("@img/why-background-mobile.jpg");
+    background-size: cover;
+    padding-top: 150px;
+  }
+
+  //   @media (max-width: $tablet) {
+  //     padding-top: 400px;
+  //   }
+
+  // .why__container
+
+  &__container {
+    position: relative;
+
+    &::before {
+      content: url("@img/decor_bubble-small.png");
+      position: absolute;
+      bottom: 20px;
+      left: -135px;
+      opacity: 0.2;
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+    &::after {
+      content: url("@img/decor_bubble-big.png");
+      position: absolute;
+      top: 180px;
+      right: -60px;
+
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+  }
+
+  // .why__title
+
+  &__title {
+    width: 50%;
+    margin-bottom: 96px;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+    @media (max-width: $mobileSmall) {
+      margin-bottom: 30px;
+    }
+  }
+
+  // .why__body
+
+  &__body {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 140px;
+    row-gap: 90px;
+    margin-left: 91px;
+
+    @media (max-width: $pc) {
+      width: 90%;
+    }
+    @media (max-width: $tablet) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 30px;
+
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  // .why__card
+
+  &__card {
+    gap: 16px;
+  }
+
+  // .why__card-wrapper
+  &__card-wrapper {
+  }
+  // .why__card-title
+
+  &__card-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-family: $fontFamilyThick;
+    line-height: math.div(20, 16);
+    margin-bottom: 20px;
+
+    @media (max-width: $tablet) {
+      gap: 8px;
+    }
+    @media (max-width: $mobileSmall) {
+      gap: 8px;
+      align-items: flex-start;
+      margin-bottom: 0px;
+
+    }
+
+    &::before {
+      content: "";
+      background-image: url("@img/why-card.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: -94px;
+      display: block;
+      width: 75px;
+      height: 62px;
+
+      @media (max-width: $tablet) {
+        position: relative;
+        left: 0;
+      }
+      @media (max-width: $mobile) {
+
+      }
+    }
+  }
+
+  // .why__card-text
+
+  &__card-text {
+    line-height: math.div(20, 16);
+  }
+
+  // .why__img-background
+
+  &__img-background {
+    position: absolute;
+    top: -380px;
+    right: 0px;
+    width: 450px;
+    height: 450px;
+    transform: rotate(45deg);
+    overflow: hidden;
+    border-radius: 100px;
+    border: 20px solid #fff;
+
+    @media (max-width: $tablet) {
+      position: relative;
+      top: -80px;
+      margin-left: auto;
+      margin-right: auto;
+      border: none;
+      width: 250px;
+      height: 250px;
+      border-radius: 58px;
+    }
+
+    &::before {
+      content: url("@img/why-decor_water.png");
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    & img {
+      transform: translateX(-103px) translateY(-105px) rotate(-45deg);
+      width: 650px;
+      height: 650px;
+      object-fit: none;
+
+      @media (max-width: $tablet) {
+        transform: translateX(-46px) translateY(-56px) rotate(-45deg);
+        width: 350px;
+        height: 350px;
+        object-fit: unset;
+      }
+    }
+  }
+}
+.section-title {
+  @include adaptiveValue("font-size", 30, 20, 1239.98, 479.98, 1);
+  font-family: $fontFamilyThick;
+  line-height: math.div(40, 30);
+}
