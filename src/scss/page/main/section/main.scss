@@ -19,11 +19,6 @@
   // .main__title
 
   &__title {
-    @include adaptiveValue("font-size", 42, 25, 1239.98, 479.98, 1);
-    color: $mainColorTitle;
-    font-family: $fontFamilyThick;
-    line-height: math.div(56, 42);
-    margin-bottom: 6px;
   }
 
   // .main__desc

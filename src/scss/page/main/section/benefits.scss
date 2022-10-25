@@ -1,0 +1,115 @@
+.benefits {
+    padding-bottom: 130px;
+  // .benefits__container
+
+  &__container {
+    margin-top: 40px;
+  }
+
+  // .benefits__title
+
+  &__title {
+    margin-bottom: 100px;
+  }
+
+  // .benefits__body
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 36px;
+    row-gap: 84px;
+
+    @media (max-width: $pc) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 74px;
+    }
+  }
+
+  // .benefits__card
+
+  &__card {
+    background-color: #00adb5;
+    border-radius: 90px;
+
+    @media (max-width: $mobile) {
+      border-radius: 0;
+    }
+  }
+
+  // .benefits__card-img
+
+  &__card-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 190px;
+    height: 156px;
+    background-image: url("@img/circle-background.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -10px;
+    transform: translateY(-64px);
+    margin-bottom: 30px;
+
+    @media (max-width: $pc) {
+      transform: translateY(-68px);
+    }
+
+    @media (max-width: $mobile) {
+      width: 130px;
+      height: 106px;
+      transform: translateY(-44px);
+      margin-left: 30px;
+    }
+
+    & svg {
+      width: 64px;
+      height: 60px;
+    }
+  }
+  & .benefits__card:nth-child(1) .benefits__card-img svg {
+    fill: #5acfa3;
+  }
+  & .benefits__card:nth-child(2) .benefits__card-img svg {
+    fill: #fbaf43;
+  }
+  & .benefits__card:nth-child(3) .benefits__card-img svg {
+    fill: #fbcadb;
+  }
+  & .benefits__card:nth-child(4) .benefits__card-img svg {
+    fill: #ff8a60;
+  }
+
+  // .benefits__text
+
+  &__text {
+    font-size: 18px;
+    line-height: math.div(22, 18);
+    color: #fff;
+    padding: 0px 20px;
+    transform: translateY(-64px);
+
+    @media (max-width: $pc) {
+      padding: 0px 40px;
+    }
+
+    @media (max-width: $mobileSmall) {
+      font-size: $fontSizeMobile;
+      padding: 0px 20px;
+    }
+  }
+}
+.benefirs {
+  // .benefirs__title
+
+  &__title {
+  }
+}
+.section-title {
+}

@@ -1,0 +1,84 @@
+.program {
+  // .program__container
+
+  &__container {
+  }
+
+  // .program__title
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  // .program__body
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 36px;
+    row-gap: 112px;
+    margin-bottom: 68px;
+
+    @media (max-width: $pc) {
+      row-gap: 62px;
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 50px;
+    }
+  }
+
+  // .program__card
+
+  &__card {
+    display: flex;
+    gap: 32px;
+    width: 80%;
+
+    @media (max-width: $pc) {
+      width: 100%;
+    }
+    @media (max-width: $tablet) {
+      gap: 16px;
+    }
+
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+    &:nth-child(4) {
+      margin-left: auto;
+    }
+  }
+
+  // .program__card-number
+
+  &__card-number {
+    font-size: 0;
+
+    & svg {
+      fill: #5acfa3;
+      width: 100%;
+      min-width: 90px;
+      max-height: 72px;
+    }
+  }
+
+  // .program__text
+
+  &__text {
+    font-size: 18px;
+    line-height: math.div(24, 18);
+
+    @media (max-width: $mobileSmall) {
+      font-size: $fontSizeMobile;
+    }
+  }
+
+  // .program__button
+  &__button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.section-title {
+}

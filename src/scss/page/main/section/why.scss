@@ -49,6 +49,7 @@
   &__title {
     width: 50%;
     margin-bottom: 96px;
+    color: #fff;
 
     @media (max-width: $tablet) {
       width: 100%;
@@ -108,7 +109,6 @@
       gap: 8px;
       align-items: flex-start;
       margin-bottom: 0px;
-
     }
 
     &::before {
@@ -127,7 +127,6 @@
         left: 0;
       }
       @media (max-width: $mobile) {
-
       }
     }
   }
@@ -138,9 +137,9 @@
     line-height: math.div(20, 16);
   }
 
-  // .why__img-background
+  // .why__img-baby
 
-  &__img-background {
+  &__img-baby {
     position: absolute;
     top: -380px;
     right: 0px;
@@ -183,9 +182,4 @@
       }
     }
   }
-}
-.section-title {
-  @include adaptiveValue("font-size", 30, 20, 1239.98, 479.98, 1);
-  font-family: $fontFamilyThick;
-  line-height: math.div(40, 30);
 }

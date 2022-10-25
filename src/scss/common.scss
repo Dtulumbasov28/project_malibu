@@ -1,1 +1,16 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.section-title {
+  @include adaptiveValue("font-size", 30, 20, 1239.98, 479.98, 1);
+  font-family: $fontFamilyThick;
+  line-height: math.div(40, 30);
+  color: #1f7cb2;
+}
+
+.main-title {
+    @include adaptiveValue("font-size", 42, 25, 1239.98, 479.98, 1);
+    color: $mainColorTitle;
+    font-family: $fontFamilyThick;
+    line-height: math.div(56, 42);
+    margin-bottom: 6px;
+}

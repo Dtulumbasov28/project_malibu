@@ -9,7 +9,7 @@
     gap: 30px;
     font-size: 18px;
     padding-top: 34px;
-	font-family: $fontFamilyThick;
+    font-family: $fontFamilyThick;
 
     @media (max-width: $pc) {
       gap: 12px;
@@ -47,11 +47,17 @@
 
   &__menu {
     @media (max-width: $tablet) {
-      display: none;
       position: absolute;
-      background-color: #5a2fa3;
+      right: -1000%;
+      top: 0;
+      transition: all .2s ease-in-out;
+      background-color: #fff;
+      color: #5acfa3;
+      font-size: 24px;
       width: 100%;
       height: 100%;
+      padding: 180px 15px 30px 15px;
+      z-index: 4;
     }
   }
 
@@ -69,6 +75,7 @@
 
     @media (max-width: $tablet) {
       flex-direction: column;
+      gap: 36px;
     }
   }
 
@@ -253,7 +260,8 @@
   // .header__menu
   & .header__menu {
     @media (max-width: $tablet) {
-      display: block;
+      right: 0;
+      transition: all .2s;
     }
   }
 }
