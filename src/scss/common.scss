@@ -8,20 +8,56 @@
 }
 
 .main-title {
-    @include adaptiveValue("font-size", 42, 25, 1239.98, 479.98, 1);
-    color: $mainColorTitle;
-    font-family: $fontFamilyThick;
-    line-height: math.div(56, 42);
-    margin-bottom: 6px;
+  @include adaptiveValue("font-size", 42, 25, 1239.98, 479.98, 1);
+  color: $mainColorTitle;
+  font-family: $fontFamilyThick;
+  line-height: math.div(56, 42);
+  margin-bottom: 6px;
 }
 
 .circle-icon {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 190px;
-	height: 156px;
-	background-image: url("@img/circle-background.svg");
-	background-repeat: no-repeat;
-	background-size: contain;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 190px;
+  height: 156px;
+  background-image: url("@img/circle-background.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
+
+.swiper-navigation-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+.swiper-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff8a60;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+
+  & svg {
+    width: 60%;
+  }
+  // .swiper-button__instructors-prev
+
+  &__instructors-prev {
+  }
+
+  // .swiper-button__instructors-next
+
+  &__instructors-next {
+  }
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+  transform: rotate(180deg);
+}
+

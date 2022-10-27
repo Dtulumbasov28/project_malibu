@@ -1,0 +1,105 @@
+.instructors {
+  position: relative;
+  padding-bottom: 190px;
+
+  @media (max-width: $mobile) {
+    padding-bottom: 70px;
+  }
+  // .instructors__container
+
+  &__container {
+  }
+
+  // .instructors__title
+
+  &__title {
+    margin-bottom: 78px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 44px;
+    }
+  }
+
+  // .instructors__body
+
+  &__body {
+    //fix slider
+    @media (min-width: $tablet) {
+      overflow: unset !important;
+    }
+  }
+
+  // .instructors__body-wrapper
+
+  &__body-wrapper {
+    display: flex;
+    justify-content: center;
+    column-gap: 72px;
+
+    @media (max-width: $pc) {
+      column-gap: 24px;
+    }
+    @media (max-width: $tablet) {
+      justify-content: unset;
+
+      column-gap: 0;
+    }
+
+    //fix slider
+    @media (min-width: $tablet) {
+      height: unset !important;
+      width: unset !important;
+      transform: unset !important;
+      align-items: unset !important;
+    }
+  }
+
+  // .instructors__card
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 24px;
+
+    //fix slider
+    @media (min-width: $tablet) {
+      width: unset !important;
+      flex-shrink: unset !important;
+      margin-right: unset !important;
+    }
+  }
+
+  // .instructors__card-img
+
+  &__card-img {
+    img {
+      @media (max-width: $mobile) {
+        width: 180px;
+        height: 180px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        width: 134px;
+        height: 134px;
+      }
+    }
+  }
+
+  // .instructors__card-name
+
+  &__card-name {
+    font-size: 20px;
+    font-weight: 700;
+
+    @media (max-width: $mobile) {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+}
+.swiper-navigation-wrapper__instructors {
+  position: absolute;
+  top: -9px;
+  right: rem(40);
+}

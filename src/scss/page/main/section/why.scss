@@ -1,5 +1,5 @@
 .why {
-  background-image: url("@img/why-background-pc.jpg");
+  background-image: url("@img/why-background-pc.svg");
   background-size: cover;
 
   color: #fff;
@@ -10,6 +10,7 @@
     background-image: url("@img/why-background-mobile.jpg");
     background-size: cover;
     padding-top: 150px;
+    padding-bottom: 140px;
   }
 
   //   @media (max-width: $tablet) {
