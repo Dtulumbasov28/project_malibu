@@ -1,0 +1,97 @@
+.reviews {
+  padding-bottom: 96px;
+  // .reviews__container
+
+  &__container {
+  }
+
+  // .reviews__title
+
+  &__title {
+    margin-bottom: 90px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 35px;
+    }
+  }
+
+  // .reviews__body
+
+  &__body {
+    overflow: unset !important;
+    @media (max-width: $tablet) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  // .reviews__body-wrapper
+
+  &__body-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 17px;
+    row-gap: 43px;
+
+    @media (max-width: $mobile) {
+      justify-content: unset;
+      flex-wrap: unset;
+      column-gap: unset;
+      row-gap: unset;
+    }
+  }
+
+  // .reviews__card
+
+  &__card {
+    max-width: 40%;
+    border: 1px solid $mainColor;
+    border-radius: 15px;
+    padding: 40px 60px 30px 50px;
+    box-shadow: 6px 6px 25px 0px #00000040;
+
+    @media (max-width: $tablet) {
+      padding: 30px 40px 20px 30px;
+    }
+    @media (max-width: $mobile) {
+      max-width: unset;
+      padding: 40px 60px 30px 50px;
+    }
+  }
+
+  // .reviews__card-name
+
+  &__card-name {
+    color: #5acfa3;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+
+  // .reviews__card-text
+
+  &__card-text {
+    margin-bottom: 26px;
+    line-height: math.div(22, 16);
+  }
+
+  // reviews__card-date
+
+  &__card-date {
+    color: #e8e8e8;
+    font-weight: 800;
+  }
+
+  // reviews__button
+
+  &__button {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.swiper-pagination__reviews {
+  @media (min-width: $mobile) {
+    display: none;
+  }
+}

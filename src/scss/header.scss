@@ -30,17 +30,6 @@
   // .header__logo
 
   &__logo {
-    display: flex;
-
-    & img {
-      width: 90px;
-      height: 90px;
-
-      @media (max-width: $mobileSmall) {
-        width: 70px;
-        height: 70px;
-      }
-    }
   }
 
   // .header__menu
@@ -50,7 +39,7 @@
       position: absolute;
       right: -1000%;
       top: 0;
-      transition: all .2s ease-in-out;
+      transition: all 0.2s ease-in-out;
       background-color: #fff;
       color: #5acfa3;
       font-size: 24px;
@@ -64,11 +53,6 @@
   // .header__list
 
   &__list {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    text-align: center;
-
     @media (max-width: $pc) {
       gap: 15px;
     }
@@ -113,9 +97,10 @@
     align-items: center;
     gap: 8px;
     white-space: nowrap;
+
     &::before {
-      width: 20px;
       content: url("@img/phone.svg");
+      width: 20px;
       fill: #0089f1;
     }
 
@@ -261,7 +246,7 @@
   & .header__menu {
     @media (max-width: $tablet) {
       right: 0;
-      transition: all .2s;
+      transition: all 0.2s;
     }
   }
 }

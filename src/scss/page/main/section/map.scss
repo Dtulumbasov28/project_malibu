@@ -1,0 +1,184 @@
+.map {
+  // .map__container
+
+  &__container {
+    max-width: 2000px;
+  }
+
+  // .map__content
+
+  &__content {
+    position: absolute;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 90px;
+    margin-left: 85px;
+    padding: 35px 20px 45px 75px;
+    background-color: #00adb5;
+    color: #fff;
+    font-size: 30px;
+    line-height: math.div(40, 30);
+    border-radius: 15px;
+    box-shadow: 6px 6px 25px 0px #00000040;
+
+    @media (max-width: $mobile) {
+      position: unset;
+      padding: unset;
+      margin: unset;
+      max-width: unset;
+      width: 100%;
+      border-radius: unset;
+      background-color: unset;
+      box-shadow: unset;
+      font-size: 18px;
+      row-gap: 24px;
+      margin-bottom: 24px;
+      margin-left: 50px;
+    }
+  }
+
+  // .map__title
+
+  &__title {
+    margin-left: 21%;
+    color: #fff;
+    margin-bottom: 40px;
+
+    @media (max-width: $mobile) {
+      display: none;
+      margin-bottom: unset;
+    }
+  }
+
+  // .map__adress
+
+  &__adress {
+    position: relative;
+    margin-bottom: 24px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: unset;
+    }
+
+    &::before {
+      content: url("@img/adress.svg");
+      position: absolute;
+      left: -40px;
+      top: 4px;
+      width: 26px;
+      height: 26px;
+      @media (max-width: $mobile) {
+        width: 20px;
+        height: 20px;
+        left: -28px;
+        top: 0;
+      }
+    }
+  }
+
+  // .map__tel
+
+  &__tel {
+    position: relative;
+    margin-bottom: 16px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: unset;
+    }
+
+    &::before {
+      content: url("@img/phone_white.svg");
+      position: absolute;
+      left: -40px;
+      top: 4px;
+      width: 26px;
+      height: 26px;
+
+      @media (max-width: $mobile) {
+        width: 22px;
+        height: 22px;
+        left: -28px;
+
+        top: 1px;
+      }
+    }
+  }
+
+  // .map__button
+
+  &__button {
+    font-size: 20px;
+    margin-bottom: 50px;
+    background: unset;
+    padding: unset;
+    border-radius: unset;
+    border-bottom: 2px solid #fff;
+
+    @media (max-width: $mobile) {
+      margin-bottom: unset;
+    }
+  }
+
+  // .map__messengers
+
+  &__messengers {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+
+    & svg {
+      width: 43px;
+      height: 43px;
+    }
+  }
+
+  // .map__messengers-telegram
+
+  &__messengers-telegram {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & svg {
+      fill: $mainColorTitle;
+      width: 27px;
+      height: 27px;
+      margin-right: 3px;
+    }
+  }
+
+  // .map__messengers-vk
+
+  &__messengers-vk {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & svg {
+      fill: $mainColorTitle;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+#map {
+  height: 600px;
+  @media (max-width: $mobile) {
+    height: 400px;
+  }
+  & iframe {
+    height: 600px;
+    @media (max-width: $mobile) {
+      height: 400px;
+    }
+  }
+}

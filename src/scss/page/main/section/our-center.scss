@@ -52,7 +52,7 @@
       min-height: 500px;
     }
     @media (max-width: $mobileSmall) {
-      min-height: 350px;
+      min-height: 300px;
     }
   }
 
@@ -102,7 +102,6 @@
   bottom: -20px;
   margin-top: 10px;
 }
-.swiper-our-center-prev {
-}
-.swiper-our-center-next {
+.our-center .swiper-button-lock {
+  display: flex !important;
 }

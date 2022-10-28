@@ -61,3 +61,58 @@
   transform: rotate(180deg);
 }
 
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  column-gap: 4px;
+  margin-top: 10px;
+}
+.swiper-pagination-bullet {
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $mainColor;
+}
+.swiper-pagination-bullet-active {
+  background-color: #f09513;
+}
+
+.menu {
+  font-family: $fontFamilyThick;
+
+  // .menu__list
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+
+ 
+  }
+
+  // .menu__item
+
+  &__item {
+  }
+
+  // .menu__link
+
+  &__link {
+  }
+}
+
+.logo {
+  display: flex;
+
+  & img {
+    width: 90px;
+    height: 90px;
+
+    @media (max-width: $mobileSmall) {
+      width: 70px;
+      height: 70px;
+    }
+  }
+}
