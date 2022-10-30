@@ -150,6 +150,7 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+
 // Подключение стилей страницы main
 @import "page/main/section/main";
 @import "page/main/section/why";
@@ -160,3 +161,6 @@ body {
 @import "page/main/section/our-center";
 @import "page/main/section/reviews";
 @import "page/main/section/map";
+
+// Подключение стилей страницы main
+@import "page/sanitary-norms/sanitary-norms";
