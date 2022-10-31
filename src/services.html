@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Главная" })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page-services">
+        @@include('html/_services.htm',{})
+        <section class="help">
+          <div class="help__container">
+            <div class="help__body">
+              <div class="help__block-form">
+                <h2 class="help__title section-title">
+                  Затрудняетесь с выбором?
+                </h2>
+                <div class="help__text">
+                  Оставьте ваш контактный телефон и мы вам поможем с выбором
+                </div>
+                <form class="help__form-body" action="#">
+                  <div class="input-group">
+                    <input
+                      required=""
+                      type="text"
+                      name="text"
+                      autocomplete="off"
+                      class="input help-input-name"
+                    />
+                    <label class="user-label">Введите Ваше имя*</label>
+                  </div>
+                  <div class="input-group">
+                    <input
+                      required=""
+                      type="tel"
+                      name="tel"
+                      autocomplete="off"
+                      class="input help-input-tel"
+                    />
+                    <label class="user-label">Введите номер телефона*</label>
+                  </div>
+                  <div class="checkbox-block">
+                    <input
+                      checked=""
+                      type="checkbox"
+                      id="checkbox-input"
+                      class="checkbox-input"
+                    />
+                    <label for="checkbox-input" class="checkbox-label"></label>
+                    <span>Политика конфиденциальности</span>
+                  </div>
+                  <input
+                    type="submit"
+                    value="Получить консультацию"
+                    class="help-form__button button"
+                  />
+				  
+                </form>
+              </div>
+              <div class="help__block-img swiper">
+                <div class="help__block-wrapper swiper-wrapper">
+                  <img
+                    class="help__img swiper-slide"
+                    src="@img/help/help-slide-1.jpg"
+                    alt="Фотография наших посетителей"
+                  />
+                  <img
+                    class="help__img swiper-slide"
+                    src="@img/help/help-slide-2.jpg"
+                    alt="Фотография наших посетителей"
+                  />
+                  <img
+                    class="help__img swiper-slide"
+                    src="@img/help/help-slide-3.jpg"
+                    alt="Фотография наших посетителей"
+                  />
+                </div>
+                <div class="swiper-pagination swiper-pagination__help"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="timetable">
+          <div class="timetable__container">
+            <h2 class="timetable__title section-title">Расписание занятий</h2>
+            <div class="timetable__body">
+              <div class="timetable__block-duration">
+                <div class="timetable__block-duration-text">
+                  <div class="timetable__time">45 минут</div>
+                  <div class="timetable__time-text">
+                    продолжительность занятия
+                  </div>
+                </div>
+              </div>
+              <div class="timetable__block-text">
+                <div class="timetable__text">
+                  Предварительно нужно записаться у администратора по тел:
+                </div>
+                <div class="timetable__tel-title">номер телефона</div>
+                <div class="timetable__tel">
+                  ежедневно с 9 ч. до 20 ч.* <br />
+                  воскресение с 11 ч. до 15 ч.* <br />
+                  время можно обсудить с администратором
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>

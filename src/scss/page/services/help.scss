@@ -1,0 +1,147 @@
+.help {
+  padding-bottom: 120px;
+  // .help__container
+
+  &__container {
+  }
+
+  // .help__body
+
+  &__body {
+    @include adaptiveValue("column-gap", 120, 20, 1239.98, 991.98, 1);
+
+    display: flex;
+    align-items: flex-start;
+
+    @media (max-width: $tablet) {
+      align-items: center;
+      flex-direction: column;
+      row-gap: 40px;
+    }
+  }
+
+  // .help__block-form
+
+  &__block-form {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+
+    @media (max-width: $tablet) {
+      width: 90%;
+    }
+  }
+
+  // .help__title
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  // .help__text
+
+  &__text {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: math.div(36 , 25);
+    margin-bottom: 64px;
+
+    @media (max-width: $pc) {
+      font-size: 22px;
+      margin-bottom: 44px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+  }
+  // .help__form-body
+
+  &__form-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 0 60px;
+
+    @media (max-width: $mobile) {
+      padding: 0px;
+    }
+  }
+
+  // .help__block-img
+
+  &__block-img {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+
+    @media (max-width: $tablet) {
+      width: 70%;
+    }
+    @media (max-width: $mobile) {
+      width: 80%;
+    }
+    @media (max-width: $mobileSmall) {
+      width: 100%;
+    }
+  }
+
+  // .help__block-wrapper
+
+  &__block-wrapper {
+    @include adaptiveValue("max-height", 470, 240, 1239.98, 479.98, 1);
+  }
+
+  // .help__img
+
+  &__img {
+    object-fit: cover;
+  }
+}
+.section-title {
+}
+.input-group {
+}
+.input {
+}
+.help-input-name {
+}
+.user-label {
+}
+.help-input-tel {
+}
+.help-input-date {
+}
+.checkbox-block {
+}
+.checkbox-input {
+}
+.checkbox-label {
+}
+.help-form {
+  // .help-form__button
+
+  &__button {
+
+  }
+}
+.button {
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.swiper-pagination {
+  // .swiper-pagination__reviews
+
+  &__help {
+    column-gap: 6px;
+
+    & .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+.timetable {
+  padding-bottom: 170px;
+  // .timetable__container
+
+  &__container {
+  }
+
+  // .timetable__title
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  // .timetable__body
+
+  &__body {
+    display: flex;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+      row-gap: 40px;
+    }
+  }
+
+  // .timetable__block-duration
+
+  &__block-duration {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &::before {
+      @include adaptiveValue("width", 700, 500, 1239.98, 991.98, 1);
+      @include adaptiveValue("height", 572, 420, 1239.98, 991.98, 1);
+      display: flex;
+      content: "";
+      background-image: url("@img/timetable-img.svg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 572px;
+
+      @media (max-width: $mobileSmall) {
+        width: 300px;
+        height: 320px;
+      }
+    }
+  }
+
+  // .timetable__block-duration-text
+
+  &__block-duration-text {
+    // @include adaptiveValue("bottom", 50, 200, 1239.98, 991.98, 1);
+
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+  }
+
+  // .timetable__time
+
+  &__time {
+    font-family: $fontFamilyThick;
+    font-size: 30px;
+    color: #5acfa3;
+    margin-bottom: 5px;
+  }
+
+  // .timetable__time-text
+
+  &__time-text {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  // .timetable__block-text
+
+  &__block-text {
+  }
+
+  // .timetable__text
+
+  &__text {
+    font-size: 25px;
+    padding-bottom: 54px;
+    border-bottom: 1px solid #1f7cb2;
+    line-height: math.div(36, 25);
+
+    @media (max-width: $tablet) {
+      padding-bottom: 30px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 22px;
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: 18px;
+    }
+  }
+
+  // .timetable__tel-title
+
+  &__tel-title {
+    @include adaptiveValue("padding-left", 80, 20, 1239.98, 991.98, 1);
+
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 36px;
+    @media (max-width: $tablet) {
+      margin-top: 16px;
+      padding-left: 0;
+    }
+    @media (max-width: $mobile) {
+      font-size: 26px;
+    }
+  }
+
+  // .timetable__tel
+
+  &__tel {
+    @include adaptiveValue("padding-left", 80, 20, 1239.98, 991.98, 1);
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: math.div(29, 20);
+    margin-top: 36px;
+
+    @media (max-width: $tablet) {
+      margin-top: 20px;
+      padding-left: 0;
+    }
+    @media (max-width: $mobile) {
+      font-size: 18px;
+    }
+    // padding-left: 80px;
+  }
+}
+.section-title {
+}

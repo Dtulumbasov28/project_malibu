@@ -162,5 +162,12 @@ body {
 @import "page/main/section/reviews";
 @import "page/main/section/map";
 
-// Подключение стилей страницы main
+// Подключение стилей страницы services
+@import "page/services/services";
+@import "page/services/help";
+@import "page/services/timetable";
+
+// Подключение стилей страницы sanitary-norms
 @import "page/sanitary-norms/sanitary-norms";
+
+

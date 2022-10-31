@@ -56,6 +56,7 @@ function initYandexMap() {
 
 //--------------------- Масска ввода номера телефона
 var phoneCall = document.querySelector(".popup-input-tel");
+var phoneCallHelp = document.querySelector(".help-input-tel");
 
 var prefixNumber2 = (str) => {
   if (str === "7") {
@@ -104,6 +105,41 @@ phoneCall.addEventListener("input", (e) => {
 
   // =====
   phoneCall.value = result;
+});
+
+phoneCallHelp.addEventListener("input", (e) => {
+  var value = phoneCallHelp.value.replace(/\D+/g, "");
+  var numberLength = 11;
+
+  let result;
+  if (phoneCallHelp.value.includes("+8") || phoneCallHelp.value[0] === "8") {
+    result = "";
+  } else {
+    result = "+";
+  }
+  // =====
+  for (let i = 0; i < value.length && i < numberLength; i++) {
+    switch (i) {
+      case 0:
+        result += prefixNumber2(value[i]);
+        continue;
+      case 4:
+        result += ") ";
+        break;
+      case 7:
+        result += "-";
+        break;
+      case 9:
+        result += "-";
+        break;
+      default:
+        break;
+    }
+    result += value[i];
+  }
+
+  // =====
+  phoneCallHelp.value = result;
 });
 
 //--------------------- Масска ввода даты рождения
