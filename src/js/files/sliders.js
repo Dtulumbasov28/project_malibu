@@ -274,6 +274,68 @@ function initSliders() {
       on: {},
     });
   }
+  if (document.querySelector(".sanitary-norms__slider")) {
+    // Указываем скласс нужного слайдера
+    // Создаем слайдер
+    new Swiper(".sanitary-norms__slider", {
+      // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation, Pagination],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 3,
+      spaceBetween: 10,
+      speed: 800,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      loop: true,
+      centeredSlides: true,
+      //preloadImages: false,
+      //lazy: true,
+
+      /*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+      // Пагинация
+
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+
+      // Скроллбар
+      /*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+      // Кнопки "влево/вправо"
+      navigation: {
+        prevEl: ".swiper-button__sanitary-prev",
+        nextEl: ".swiper-button__sanitary-next",
+      },
+
+      // Брейкпоинты
+
+      // breakpoints: {
+      //   320: { enabled: true },
+
+      //   768: { enabled: false },
+      // },
+
+      // События
+      on: {},
+    });
+  }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {

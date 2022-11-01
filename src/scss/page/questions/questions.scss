@@ -1,0 +1,147 @@
+.questions {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  // .questions__container
+
+  &__container {
+  }
+
+  // .questions__title
+
+  &__title {
+    font-size: 40px;
+    margin-bottom: 100px;
+  }
+
+  // .questions__body
+
+  &__body {
+    @include adaptiveValue("column-gap", 160, 115, 1239.98, 991.98, 1);
+    display: flex;
+
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  // .questions__spollers
+
+  &__spollers {
+    width: 50%;
+
+    @media (max-width: $tablet) {
+      width: 90%;
+    }
+    @media (max-width: $mobile) {
+      width: 100%;
+    }
+  }
+
+  // .questions__spollers-item
+
+  &__spollers-item {
+  }
+
+  // .questions__spollers-title
+
+  &__spollers-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 1px solid #5acfa3;
+    padding-bottom: 8px;
+    margin-bottom: 40px;
+
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+    @media (max-width: $mobileSmall) {
+      margin-right: 46px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "+";
+      width: 47px;
+      height: 47px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 50px;
+      line-height: math.div(50 , 50);
+      font-weight: 300;
+      color: #fff;
+      border-radius: 50%;
+      background-color: $mainColor;
+      right: -90px;
+
+      @media (max-width: $mobile) {
+        font-size: 40px;
+        line-height: math.div(40 , 40);
+        width: 36px;
+        height: 36px;
+        right: -50px;
+      }
+    }
+  }
+
+  // .questions__spollers-body
+
+  &__spollers-body {
+    color: #5acfa3;
+    line-height: math.div(20, 16);
+    margin-top: 26px;
+    margin-bottom: 36px;
+  }
+  // .questions__form
+
+  &__form {
+    width: 50%;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+    }
+  }
+  // .questions__form-body
+
+  &__form-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    max-width: 350px;
+  }
+}
+.questionsform__title {
+  margin-bottom: 40px;
+}
+.section-title {
+}
+.input-group {
+}
+.input {
+}
+.questions-input-name {
+}
+.user-label {
+}
+.questions-input-tel {
+}
+.questions-input-date {
+}
+.checkbox-block {
+}
+.checkbox-input {
+}
+.checkbox-label {
+}
+.questions-form {
+  // .questions-form__button
+
+  &__button {
+  }
+}
+.button {
+}

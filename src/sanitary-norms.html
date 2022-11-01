@@ -1,28 +1,78 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('html/_head.htm',{ "title":"Главная" })
+  @@include('html/_head.htm',{ "title":"Главная" })
 
-<body>
-	<div class="wrapper">
-		@@include('html/_header.htm',{})
-		<main class="page-sanitary-norms">
-			<section class="sanitary-norms">
-				<div class="sanitary-norms__container">
-					<h2 class="sanitary-norms__title section-title">Санитарно-эпидемиологические нормы</h2>
-
-				</div>
-			</section>
-			<section class="certificates">
-				<div class="certificates__container">
-					<h2 class="certificates__title section-title">Сертификаты сотрудников</h2>
-
-				</div>
-			</section>
-			</h2>
-		</main>
-		@@include('html/_footer.htm',{})
-	</div>
-	@@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
-</body>
-
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page-sanitary-norms">
+        <section class="sanitary-norms">
+          <div class="sanitary-norms__container">
+            <h2 class="sanitary-norms__title section-title">
+              Санитарно-эпидемиологические нормы
+            </h2>
+            <div class="sanitary-norms__body">
+              <div class="sanitary-norms__slider swiper">
+                <div class="sanitary-norms__slider-wrapper swiper-wrapper">
+                  <img
+                    class="sanitary-norms__slider-img swiper-slide"
+                    src="@img/sanitary-norms/sanitary-norms-slide-1.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="sanitary-norms__slider-img swiper-slide"
+                    src="@img/sanitary-norms/sanitary-norms-slide-2.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="sanitary-norms__slider-img swiper-slide"
+                    src="@img/sanitary-norms/sanitary-norms-slide-3.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div
+                class="swiper-navigation-wrapper swiper-navigation-wrapper__sanitary"
+              >
+                <button
+                  type="button"
+                  class="swiper-button swiper-button-prev swiper-button__sanitary-prev"
+                >
+                  <svg>
+                    <use
+                      xlink:href="@img/icons/icons.svg#svg-slider-arrow"
+                    ></use>
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="swiper-button swiper-button-next swiper-button__sanitary-next"
+                >
+                  <svg>
+                    <use
+                      xlink:href="@img/icons/icons.svg#svg-slider-arrow"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="sanitary-norms__text">
+                Более того, установлены кварцево-песочный фильтр, ультрафиолет,
+                озонирование, автоматический подогрев воды, станция дозирования
+                хлора, концентрация которого не превышает 0,3 мг.
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="certificates">
+          <div class="certificates__container">
+            <h2 class="certificates__title section-title">
+              Сертификаты сотрудников
+            </h2>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
 </html>

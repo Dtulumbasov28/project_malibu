@@ -107,40 +107,40 @@ phoneCall.addEventListener("input", (e) => {
   phoneCall.value = result;
 });
 
-phoneCallHelp.addEventListener("input", (e) => {
-  var value = phoneCallHelp.value.replace(/\D+/g, "");
-  var numberLength = 11;
+// phoneCallHelp.addEventListener("input", (e) => {
+//   var value = phoneCallHelp.value.replace(/\D+/g, "");
+//   var numberLength = 11;
 
-  let result;
-  if (phoneCallHelp.value.includes("+8") || phoneCallHelp.value[0] === "8") {
-    result = "";
-  } else {
-    result = "+";
-  }
-  // =====
-  for (let i = 0; i < value.length && i < numberLength; i++) {
-    switch (i) {
-      case 0:
-        result += prefixNumber2(value[i]);
-        continue;
-      case 4:
-        result += ") ";
-        break;
-      case 7:
-        result += "-";
-        break;
-      case 9:
-        result += "-";
-        break;
-      default:
-        break;
-    }
-    result += value[i];
-  }
+//   let result;
+//   if (phoneCallHelp.value.includes("+8") || phoneCallHelp.value[0] === "8") {
+//     result = "";
+//   } else {
+//     result = "+";
+//   }
+//   // =====
+//   for (let i = 0; i < value.length && i < numberLength; i++) {
+//     switch (i) {
+//       case 0:
+//         result += prefixNumber2(value[i]);
+//         continue;
+//       case 4:
+//         result += ") ";
+//         break;
+//       case 7:
+//         result += "-";
+//         break;
+//       case 9:
+//         result += "-";
+//         break;
+//       default:
+//         break;
+//     }
+//     result += value[i];
+//   }
 
-  // =====
-  phoneCallHelp.value = result;
-});
+//   // =====
+//   phoneCallHelp.value = result;
+// });
 
 //--------------------- Масска ввода даты рождения
 var input = document.querySelectorAll(".popup-input-date")[0];

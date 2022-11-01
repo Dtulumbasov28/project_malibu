@@ -1,0 +1,66 @@
+.sanitary-norms {
+  padding-top: 100px;
+  padding-bottom: 70px;
+
+  // .sanitary-norms__container
+
+  &__container {
+  }
+
+  // .sanitary-norms__title
+
+  &__title {
+    margin-bottom: 28px;
+  }
+
+  // .sanitary-norms__body
+
+  &__body {
+  }
+
+  // .sanitary-norms__slider
+
+  &__slider {
+    margin-bottom: 10px;
+  }
+
+  // .sanitary-norms__slider-wrapper
+
+  &__slider-wrapper {
+  }
+
+  // .sanitary-norms__slider-img
+
+  &__slider-img {
+    object-fit: cover;
+    transform: scale(0.9);
+    transition: all 0.5s;
+
+    &.swiper-slide-active {
+      transform: scale(1);
+      transition: all 0.5s;
+    }
+  }
+
+  // .sanitary-norms__text
+
+  &__text {
+    margin-top: 50px;
+  }
+}
+.swiper-pagination__sanitary-norm {
+  column-gap: 7px;
+
+  & .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+  }
+}
+.section-title {
+}
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}

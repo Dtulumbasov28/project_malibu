@@ -3,6 +3,7 @@
 .section-title {
   @include adaptiveValue("font-size", 30, 20, 1239.98, 479.98, 1);
   font-family: $fontFamilyThick;
+  font-weight: 500;
   line-height: math.div(40, 30);
   color: #1f7cb2;
 }
