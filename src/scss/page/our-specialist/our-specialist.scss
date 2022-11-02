@@ -1,0 +1,57 @@
+.our-specialist {
+  padding-top: 85px;
+  padding-bottom: 100px;
+
+  @media (max-width: $mobile) {
+    padding-top: 40px;
+  }
+  // .our-specialist__container
+
+  &__container {
+  }
+
+  // .our-specialist__title
+
+  &__title {
+    margin-bottom: 80px;
+
+    @media (max-width: $mobile) {
+      margin-bottom: 40px;
+    }
+  }
+
+  // .our-specialist__body
+
+  &__body {
+  }
+
+  // .our-specialist__body-wrapper
+
+  &__body-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 80px;
+
+    @media (max-width: $tablet) {
+      display: flex !important;
+    }
+  }
+
+  // .our-specialist__card
+
+  &__card {
+  }
+
+  // .our-specialist__img
+
+  &__img {
+  }
+
+  // .our-specialist__name
+
+  &__name {
+  }
+}
+.swiper-navigation-wrapper__our-specialist {
+  margin-top: 30px;
+}

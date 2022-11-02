@@ -2,6 +2,9 @@
   padding-top: 100px;
   padding-bottom: 70px;
 
+  @media (max-width: $mobile) {
+    padding-top: 40px;
+  }
   // .sanitary-norms__container
 
   &__container {
@@ -46,6 +49,10 @@
 
   &__text {
     margin-top: 50px;
+
+    @media (max-width: $mobile) {
+      margin-top: 20px;
+    }
   }
 }
 .swiper-pagination__sanitary-norm {
@@ -55,12 +62,4 @@
     width: 14px;
     height: 14px;
   }
-}
-.section-title {
-}
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
 }

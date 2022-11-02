@@ -58,10 +58,17 @@
     position: relative;
     margin-bottom: 24px;
 
+    &:hover {
+      &::before {
+        transform: scale(1.1);
+        transition: all 0.2s;
+      }
+    }
+
     @media (max-width: $mobile) {
       margin-bottom: unset;
     }
-
+    
     &::before {
       content: url("@img/adress.svg");
       position: absolute;
@@ -69,6 +76,8 @@
       top: 4px;
       width: 26px;
       height: 26px;
+      transition: all 0.2s;
+
       @media (max-width: $mobile) {
         width: 20px;
         height: 20px;
@@ -84,6 +93,13 @@
     position: relative;
     margin-bottom: 16px;
 
+    &:hover {
+      &::before {
+        transform: scale(1.1);
+        transition: all 0.2s;
+      }
+    }
+
     @media (max-width: $mobile) {
       margin-bottom: unset;
     }
@@ -93,14 +109,14 @@
       position: absolute;
       left: -40px;
       top: 4px;
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
+      transition: all 0.2s;
 
       @media (max-width: $mobile) {
         width: 22px;
         height: 22px;
         left: -28px;
-
         top: 1px;
       }
     }
@@ -144,11 +160,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+      & svg {
+        fill: $mainColorHover;
+        transition: all 0.2s;
+      }
+    }
+
     & svg {
       fill: $mainColorTitle;
       width: 27px;
       height: 27px;
       margin-right: 3px;
+      transition: all 0.2s;
     }
   }
 
@@ -162,10 +187,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+      & svg {
+        fill: $mainColorHover;
+        transition: all 0.2s;
+      }
+    }
+
     & svg {
       fill: $mainColorTitle;
       width: 30px;
       height: 30px;
+      transition: all 0.2s;
     }
   }
 }

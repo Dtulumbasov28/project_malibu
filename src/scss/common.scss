@@ -126,14 +126,100 @@
   background: radial-gradient(#fbaf43, #f09513);
   border-radius: 15px;
   //   box-shadow: 0px 3px 0px 0px rgba(251, 175, 67, 1);
+  transform: scale(1);
   transition: all 0.2s ease;
 
   &:hover {
     // transform: translateY(-4px);
     // box-shadow: 0px 20px 29px -19px #000;
+    transform: scale(1.01);
   }
   &:active {
     transform: scale(0.97);
     // transform: scale(0.95) translateY(-9px);
+  }
+}
+
+.lg-backdrop.in {
+  opacity: 0.7 !important;
+}
+
+// section "team"
+
+.team-body {
+  // .team-body__wrapper
+
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    column-gap: 72px;
+
+    @media (max-width: $pc) {
+      column-gap: 24px;
+    }
+    @media (max-width: $tablet) {
+      justify-content: unset;
+      column-gap: 0;
+    }
+    //fix slider
+    @media (min-width: $tablet) {
+      height: unset !important;
+      width: unset !important;
+      transform: unset !important;
+      align-items: unset !important;
+    }
+  }
+
+  // .team-body__slide
+
+  &__slide {
+    text-align: center;
+    line-height: math.div(26, 20);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    //fix slider
+    @media (min-width: $tablet) {
+      width: unset !important;
+      flex-shrink: unset !important;
+      margin-right: unset !important;
+    }
+  }
+
+  // .team-body__img
+
+  &__img {
+    margin-bottom: 24px;
+    img {
+      @media (max-width: $mobile) {
+        width: 180px;
+        height: 180px;
+      }
+
+      @media (max-width: $mobileSmall) {
+        width: 134px;
+        height: 134px;
+      }
+    }
+  }
+
+  // .team-body__name
+
+  &__name {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+
+    @media (max-width: $mobile) {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  // .team-body__speciality
+
+  &__speciality {
+    margin-top: auto;
   }
 }

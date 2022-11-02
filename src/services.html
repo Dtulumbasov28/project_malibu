@@ -24,6 +24,7 @@
                       type="text"
                       name="text"
                       autocomplete="off"
+                      onkeyup="this.value = this.value.replace(/[a-z0-9+= ]/gi,'');"
                       class="input help-input-name"
                     />
                     <label class="user-label">Введите Ваше имя*</label>
@@ -34,7 +35,7 @@
                       type="tel"
                       name="tel"
                       autocomplete="off"
-                      class="input help-input-tel"
+                      class="input help-input-tel input-tel"
                     />
                     <label class="user-label">Введите номер телефона*</label>
                   </div>
@@ -145,15 +146,17 @@
                   Занятия проходят группами (максимум 4 человека)
                 </div>
                 <ul>
-                  <div style="margin-bottom: 20px"> Для посещения необходимо: </div>
+                  <div style="margin-bottom: 20px">
+                    Для посещения необходимо:
+                  </div>
                   <li>
                     • Нужны справки: справка-разрешение от педиатра , справка о
                     неконтактности, соскоб на энтеробиоз;
                   </li>
-                  <li> • Подгузники для купания (можно приобрести у нас);</li>
-                  <li> • Две пелёнки;</li>
-                  <li> • Тапочки для родителя;</li>
-                  <li> • Полотенце для ребёнка.</li>
+                  <li>• Подгузники для купания (можно приобрести у нас);</li>
+                  <li>• Две пелёнки;</li>
+                  <li>• Тапочки для родителя;</li>
+                  <li>• Полотенце для ребёнка.</li>
                 </ul>
               </div>
             </div>

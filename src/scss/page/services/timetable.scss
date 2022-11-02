@@ -1,5 +1,9 @@
 .timetable {
   padding-bottom: 170px;
+
+  @media (max-width: $mobile) {
+    padding-bottom: 70px;
+  }
   // .timetable__container
 
   &__container {
@@ -19,6 +23,9 @@
     @media (max-width: $tablet) {
       flex-direction: column;
       row-gap: 40px;
+    }
+    @media (max-width: $mobileSmall) {
+      row-gap: 0px;
     }
   }
 

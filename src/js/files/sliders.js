@@ -7,7 +7,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination } from "swiper";
+import Swiper, { Navigation, Pagination, EffectFade } from "swiper";
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -28,6 +28,7 @@ function initSliders() {
   // Перечень слайдеров
   // Проверяем, есть ли слайдер на стронице
 
+  // Секция "инструкторы"
   if (document.querySelector(".instructors__body")) {
     // Указываем скласс нужного слайдера
     // Создаем слайдер
@@ -90,6 +91,7 @@ function initSliders() {
       on: {},
     });
   }
+  // Секция "наш центр"
   if (document.querySelector(".our-center__img-block")) {
     // Указываем скласс нужного слайдера
     // Создаем слайдер
@@ -152,6 +154,7 @@ function initSliders() {
       on: {},
     });
   }
+  // Секция "отзывы наших клиентов"
   if (document.querySelector(".reviews__body")) {
     // Указываем скласс нужного слайдера
     // Создаем слайдер
@@ -213,6 +216,7 @@ function initSliders() {
       on: {},
     });
   }
+  // Секция "затрудняетесь с выбором?"
   if (document.querySelector(".help__block-img")) {
     // Указываем скласс нужного слайдера
     // Создаем слайдер
@@ -274,6 +278,7 @@ function initSliders() {
       on: {},
     });
   }
+  // Секция "санитарно-эпидемиологические нормы - изображения"
   if (document.querySelector(".sanitary-norms__slider")) {
     // Указываем скласс нужного слайдера
     // Создаем слайдер
@@ -284,13 +289,15 @@ function initSliders() {
       modules: [Navigation, Pagination],
       observer: true,
       observeParents: true,
-      slidesPerView: 3,
+      // slidesPerView: 3,
       spaceBetween: 10,
       speed: 800,
       //touchRatio: 0,
       //simulateTouch: false,
       loop: true,
       centeredSlides: true,
+      allowTouchMove: false,
+
       //preloadImages: false,
       //lazy: true,
 
@@ -305,10 +312,71 @@ function initSliders() {
 
       // Пагинация
 
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      // },
+
+      // Скроллбар
+      /*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+      // Кнопки "влево/вправо"
+      navigation: {
+        prevEl: ".swiper-button__sanitary-prev",
+        nextEl: ".swiper-button__sanitary-next",
       },
+
+      // Брейкпоинты
+
+      breakpoints: {
+        0: { slidesPerView: 1 },
+
+        600: { slidesPerView: 3 },
+      },
+
+      // События
+      on: {},
+    });
+  }
+  // Секция "санитарно-эпидемиологические нормы - текст"
+  if (document.querySelector(".sanitary-norms__text")) {
+    // Указываем скласс нужного слайдера
+    // Создаем слайдер
+    new Swiper(".sanitary-norms__text", {
+      // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation, EffectFade],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      // spaceBetween: 10,
+      speed: 800,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      loop: true,
+      allowTouchMove: false,
+      // centeredSlides: true,
+      //preloadImages: false,
+      //lazy: true,
+
+      // Эффекты
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+
+      // Пагинация
+
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      // },
 
       // Скроллбар
       /*
@@ -331,6 +399,132 @@ function initSliders() {
 
       //   768: { enabled: false },
       // },
+
+      // События
+      on: {},
+    });
+  }
+  // Секция "сертификаты сотрудников"
+  if (document.querySelector(".certificates__body")) {
+    // Указываем скласс нужного слайдера
+    // Создаем слайдер
+    new Swiper(".certificates__body", {
+      // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Pagination],
+      observer: true,
+      observeParents: true,
+      // slidesPerView: 5,
+      spaceBetween: 30,
+      speed: 800,
+      initialSlide: 2,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      // loop: true,
+      // allowTouchMove: false,
+      centeredSlides: true,
+      //preloadImages: false,
+      // lazy: true,
+
+      // Эффекты
+      // effect: 'fade',
+      // fadeEffect: {
+      //   crossFade: true
+      // },
+
+      // Пагинация
+
+      pagination: {
+        el: ".swiper-pagination__certificates",
+        clickable: true,
+      },
+
+      // Скроллбар
+      /*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+      // Кнопки "влево/вправо"
+      // navigation: {
+      //   prevEl: ".swiper-button__sanitary-prev",
+      //   nextEl: ".swiper-button__sanitary-next",
+      // },
+
+      // Брейкпоинты
+
+      breakpoints: {
+        0: { slidesPerView: 1 },
+        420: { slidesPerView: 2 },
+        768: { slidesPerView: 3 },
+        991: { slidesPerView: 4 },
+        1240: { slidesPerView: 5 },
+      },
+
+      // События
+      on: {},
+    });
+  }
+  // Секция "наши специалисты"
+  if (document.querySelector(".our-specialist__body")) {
+    // Указываем скласс нужного слайдера
+    // Создаем слайдер
+    new Swiper(".our-specialist__body", {
+      // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Navigation],
+      observer: true,
+      observeParents: true,
+      slidesPerView: "auto",
+      spaceBetween: 24,
+      speed: 800,
+      // centeredSlides: true,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      //preloadImages: false,
+      //lazy: true,
+
+      /*
+        // Эффекты
+        effect: 'fade',
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        */
+
+      // Пагинация
+      /*
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        */
+
+      // Скроллбар
+      /*
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          draggable: true,
+        },
+        */
+
+      // Кнопки "влево/вправо"
+      navigation: {
+        prevEl: ".swiper-button__our-specialist-prev",
+        nextEl: ".swiper-button__our-specialist-next",
+      },
+
+      // Брейкпоинты
+
+      breakpoints: {
+        320: { enabled: true },
+        992: { enabled: false },
+      },
 
       // События
       on: {},

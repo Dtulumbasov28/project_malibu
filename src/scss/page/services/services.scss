@@ -1,3 +1,7 @@
 .page-services {
     margin-top: 44px;
+
+    @media (max-width: $mobile) {
+        margin-top: 10px;
+    }
 }

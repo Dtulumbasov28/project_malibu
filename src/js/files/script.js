@@ -54,95 +54,51 @@ function initYandexMap() {
   document.getElementById("map").appendChild(script);
 }
 
-//--------------------- Масска ввода номера телефона
-var phoneCall = document.querySelector(".popup-input-tel");
-var phoneCallHelp = document.querySelector(".help-input-tel");
-
-var prefixNumber2 = (str) => {
-  if (str === "7") {
-    return "7 (";
-  }
-  if (str === "8") {
-    return "8 (";
-  }
-  if (str === "9") {
-    return "7 (9";
-  }
-  return "7 (";
-};
-// ===== Валидация номера телефона
-
-phoneCall.addEventListener("input", (e) => {
-  var value = phoneCall.value.replace(/\D+/g, "");
-  var numberLength = 11;
-
-  let result;
-  if (phoneCall.value.includes("+8") || phoneCall.value[0] === "8") {
-    result = "";
-  } else {
-    result = "+";
-  }
-  // =====
-  for (let i = 0; i < value.length && i < numberLength; i++) {
-    switch (i) {
-      case 0:
-        result += prefixNumber2(value[i]);
-        continue;
-      case 4:
-        result += ") ";
-        break;
-      case 7:
-        result += "-";
-        break;
-      case 9:
-        result += "-";
-        break;
-      default:
-        break;
+//--------------------- Маска ввода номера телефона
+window.addEventListener("DOMContentLoaded", function () {
+  [].forEach.call(document.querySelectorAll(".input-tel"), function (input) {
+    var keyCode;
+    function mask(event) {
+      event.keyCode && (keyCode = event.keyCode);
+      var pos = this.selectionStart;
+      if (pos < 3) event.preventDefault();
+      var matrix = "+7 (___) ___ ____",
+        i = 0,
+        def = matrix.replace(/\D/g, ""),
+        val = this.value.replace(/\D/g, ""),
+        new_value = matrix.replace(/[_\d]/g, function (a) {
+          return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+        });
+      i = new_value.indexOf("_");
+      if (i != -1) {
+        i < 5 && (i = 3);
+        new_value = new_value.slice(0, i);
+      }
+      var reg = matrix
+        .substr(0, this.value.length)
+        .replace(/_+/g, function (a) {
+          return "\\d{1," + a.length + "}";
+        })
+        .replace(/[+()]/g, "\\$&");
+      reg = new RegExp("^" + reg + "$");
+      if (
+        !reg.test(this.value) ||
+        this.value.length < 5 ||
+        (keyCode > 47 && keyCode < 58)
+      )
+        this.value = new_value;
+      if (event.type == "blur" && this.value.length < 5) this.value = "";
     }
-    result += value[i];
-  }
 
-  // =====
-  phoneCall.value = result;
+    input.addEventListener("input", mask, false);
+    input.addEventListener("focus", mask, false);
+    input.addEventListener("blur", mask, false);
+    input.addEventListener("keydown", mask, false);
+  });
 });
 
-// phoneCallHelp.addEventListener("input", (e) => {
-//   var value = phoneCallHelp.value.replace(/\D+/g, "");
-//   var numberLength = 11;
+//--------------------- Маска ввода даты рождения
 
-//   let result;
-//   if (phoneCallHelp.value.includes("+8") || phoneCallHelp.value[0] === "8") {
-//     result = "";
-//   } else {
-//     result = "+";
-//   }
-//   // =====
-//   for (let i = 0; i < value.length && i < numberLength; i++) {
-//     switch (i) {
-//       case 0:
-//         result += prefixNumber2(value[i]);
-//         continue;
-//       case 4:
-//         result += ") ";
-//         break;
-//       case 7:
-//         result += "-";
-//         break;
-//       case 9:
-//         result += "-";
-//         break;
-//       default:
-//         break;
-//     }
-//     result += value[i];
-//   }
-
-//   // =====
-//   phoneCallHelp.value = result;
-// });
-
-//--------------------- Масска ввода даты рождения
 var input = document.querySelectorAll(".popup-input-date")[0];
 
 var dateInputMask = function dateInputMask(elm) {

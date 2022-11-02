@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Главная" })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page-questions">
+        <section class="our-specialist">
+          <div class="our-specialist__container">
+            <h2 class="our-specialist__title section-title">
+              Наши специалисты
+            </h2>
+            <div class="our-specialist__body team-body swiper">
+              <div
+                class="our-specialist__body-wrapper team-body__wrapper swiper-wrapper"
+              >
+                <div class="our-specialist__card team-body__slide swiper-slide">
+                  <div class="our-specialist__img team-body__img">
+                    <img
+                      src="@img/instructors/instructors-card-1.png"
+                      alt="Фотография нашего инструктора"
+                    />
+                  </div>
+                  <div class="our-specialist__name team-body__name">
+                    Иван Иванов
+                  </div>
+                  <div class="our-specialist__speciality team-body__speciality">Инструктор 3 разряда</div>
+                </div>
+                <div class="our-specialist__card team-body__slide swiper-slide">
+                  <div class="our-specialist__img team-body__img">
+                    <img
+                      src="@img/instructors/instructors-card-2.png"
+                      alt="Фотография нашего инструктора"
+                    />
+                  </div>
+                  <div class="our-specialist__name team-body__name">
+                    Иван Иванов
+                  </div>
+                  <div class="our-specialist__speciality team-body__speciality">Инструктор</div>
+                </div>
+                <div class="our-specialist__card team-body__slide swiper-slide">
+                  <div class="our-specialist__img team-body__img">
+                    <img
+                      src="@img/instructors/instructors-card-3.png"
+                      alt="Фотография нашего инструктора"
+                    />
+                  </div>
+                  <div class="our-specialist__name team-body__name">
+                    Иван Иванов
+                  </div>
+                  <div class="our-specialist__speciality team-body__speciality">Младший инструктор</div>
+                </div>
+                <div class="our-specialist__card team-body__slide swiper-slide">
+                  <div class="our-specialist__img team-body__img">
+                    <img
+                      src="@img/instructors/instructors-card-4.png"
+                      alt="Фотография нашего инструктора"
+                    />
+                  </div>
+                  <div class="our-specialist__name team-body__name">
+                    Иван Иванов
+                  </div>
+                  <div class="our-specialist__speciality team-body__speciality">Старший инструктор</div>
+                </div>
+                <div class="our-specialist__card team-body__slide swiper-slide">
+                  <div class="our-specialist__img team-body__img">
+                    <img
+                      src="@img/instructors/instructors-card-5.png"
+                      alt="Фотография нашего инструктора"
+                    />
+                  </div>
+                  <div class="our-specialist__name team-body__name">
+                    Ивановович Александр
+                  </div>
+                  <div class="our-specialist__speciality team-body__speciality">Директор</div>
+                </div>
+                <div class="our-specialist__card team-body__slide swiper-slide">
+                  <div class="our-specialist__img team-body__img">
+                    <img
+                      src="@img/instructors/instructors-card-6.png"
+                      alt="Фотография нашего инструктора"
+                    />
+                  </div>
+                  <div class="our-specialist__name team-body__name">
+                    Иван Иванов
+                  </div>
+                  <div class="our-specialist__speciality team-body__speciality">Администратор</div>
+                </div>
+                <div class="our-specialist__card team-body__slide swiper-slide">
+                  <div class="our-specialist__img team-body__img">
+                    <img
+                      src="@img/instructors/instructors-card-7.png"
+                      alt="Фотография нашего инструктора"
+                    />
+                  </div>
+                  <div class="our-specialist__name team-body__name">
+                    Иван Иванов
+                  </div>
+                  <div class="our-specialist__speciality team-body__speciality">Инструктор по водному плаванию</div>
+                </div>
+                <div class="our-specialist__card team-body__slide swiper-slide">
+                  <div class="our-specialist__img team-body__img">
+                    <img
+                      src="@img/instructors/instructors-card-8.png"
+                      alt="Фотография нашего инструктора"
+                    />
+                  </div>
+                  <div class="our-specialist__name team-body__name">
+                    Иван Иванов
+                  </div>
+                  <div class="our-specialist__speciality team-body__speciality">Инструктор по водному плаванию</div>
+
+                </div>
+              </div>
+              <div
+                class="swiper-navigation-wrapper swiper-navigation-wrapper__our-specialist"
+              >
+                <button
+                  type="button"
+                  class="swiper-button swiper-button-prev swiper-button__our-specialist-prev"
+                >
+                  <svg>
+                    <use
+                      xlink:href="@img/icons/icons.svg#svg-slider-arrow"
+                    ></use>
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="swiper-button swiper-button-next swiper-button__our-specialist-next"
+                >
+                  <svg>
+                    <use
+                      xlink:href="@img/icons/icons.svg#svg-slider-arrow"
+                    ></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include('html/_map.htm',{})
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+</html>

@@ -64,12 +64,26 @@ body::after {
   top: -26px;
   right: -26px;
   background: transparent;
-  transform: rotate(90deg);
+  width: 30px;
+  height: 30px;
+  transform: scale(1);
+  transition: all 0.2s ease;
 
   & svg {
     fill: #fff;
     width: 30px;
     height: 30px;
+  }
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+
+  @media (max-width: $mobileSmall) {
+    right: 0;
+    top: -40px;
   }
 }
 
@@ -136,8 +150,8 @@ input:valid {
 .checkbox-label {
   position: relative;
   top: 1px;
-  width: 23px;
-  height: 23px;
+  min-width: 23px;
+  min-height: 23px;
   border: 1px solid #f09513;
   border-radius: 3px;
   vertical-align: middle;
