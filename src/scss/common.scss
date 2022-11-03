@@ -106,12 +106,16 @@
   display: flex;
 
   & img {
-    width: 90px;
-    height: 90px;
+    width: 190px;
+    height: 190px;
 
+    @media (max-width: $pc) {
+      width: 150px;
+      height: 150px;
+    }
     @media (max-width: $mobileSmall) {
-      width: 70px;
-      height: 70px;
+      width: 130px;
+      height: 130px;
     }
   }
 }
