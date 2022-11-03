@@ -1034,18 +1034,18 @@ input:valid {
 }
 
 .why__img-baby::before {
-  content: url("../img/why-decor_water.png");
+  content: "";
+  background-image: url("../img/why-decor_water.png");
+  background-repeat: no-repeat;
+  background-size: 70%;
   position: absolute;
-  top: -185px;
-  right: -50px;
-  width: 350px;
-  height: 300px;
-  z-index: 2;
+  top: -212px;
+  right: -216px;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  width: 350px;
-  height: 350px;
+  width: 100%;
+  height: 100%;
   z-index: 2;
 }
 
@@ -1062,11 +1062,11 @@ input:valid {
 }
 
 .why__img-baby img {
-  -webkit-transform: translateX(-116px) translateY(-127px) rotate(-45deg);
-      -ms-transform: translateX(-116px) translateY(-127px) rotate(-45deg);
-          transform: translateX(-116px) translateY(-127px) rotate(-45deg);
-  width: 650px;
-  height: 650px;
+  -webkit-transform: translateX(-161px) translateY(-138px) rotate(-45deg) scale(0.99);
+      -ms-transform: translateX(-161px) translateY(-138px) rotate(-45deg) scale(0.99);
+          transform: translateX(-161px) translateY(-138px) rotate(-45deg) scale(0.99);
+  width: 700px;
+  height: 700px;
   -o-object-fit: none;
      object-fit: none;
 }
