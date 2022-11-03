@@ -12,10 +12,6 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
-    // @media (max-width: $mobile) {
-    //   margin: 24px 0px 34px 0px;
-    // }
   }
   // .footer__body
 
@@ -45,11 +41,6 @@
     }
   }
 
-  // .footer__menu
-
-  &__menu {
-  }
-
   // .footer__list
 
   &__list {
@@ -64,16 +55,6 @@
     }
   }
 
-  // .footer__item
-
-  &__item {
-  }
-
-  // .footer__link
-
-  &__link {
-  }
-
   // .footer__politic
 
   &__politic {
@@ -83,24 +64,6 @@
     @media (max-width: $mobile) {
       opacity: 0.5;
     }
-  }
-}
-.logo {
-}
-.menu {
-  // .menu__list
-
-  &__list {
-  }
-
-  // .menu__item
-
-  &__item {
-  }
-
-  // .menu__link
-
-  &__link {
   }
 }
 

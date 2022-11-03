@@ -1,5 +1,3 @@
-.page-main {
-}
 .main {
   // .main__container
   &__container {
@@ -15,12 +13,6 @@
       width: 90%;
     }
   }
-
-  // .main__title
-
-  &__title {
-  }
-
   // .main__desc
 
   &__desc {
@@ -28,11 +20,6 @@
     font-weight: 600;
     line-height: math.div(26, 18);
     margin-bottom: 36px;
-  }
-
-  // .main__button
-
-  &__button {
   }
 }
 

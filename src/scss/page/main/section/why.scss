@@ -1,7 +1,6 @@
 .why {
   background-image: url("@img/why-background-pc.svg");
   background-size: cover;
-
   color: #fff;
   padding-top: 87px;
   padding-bottom: 280px;
@@ -12,10 +11,6 @@
     padding-top: 150px;
     padding-bottom: 140px;
   }
-
-  //   @media (max-width: $tablet) {
-  //     padding-top: 400px;
-  //   }
 
   // .why__container
 
@@ -33,6 +28,7 @@
         display: none;
       }
     }
+
     &::after {
       content: url("@img/decor_bubble-big.png");
       position: absolute;
@@ -78,7 +74,6 @@
     @media (max-width: $tablet) {
       grid-template-columns: repeat(1, 1fr);
       row-gap: 30px;
-
       width: 100%;
       margin-left: 0;
     }
@@ -90,9 +85,6 @@
     gap: 16px;
   }
 
-  // .why__card-wrapper
-  &__card-wrapper {
-  }
   // .why__card-title
 
   &__card-title {
@@ -106,6 +98,7 @@
     @media (max-width: $tablet) {
       gap: 8px;
     }
+
     @media (max-width: $mobileSmall) {
       gap: 8px;
       align-items: flex-start;
@@ -127,6 +120,7 @@
         position: relative;
         left: 0;
       }
+
       @media (max-width: $mobile) {
       }
     }
@@ -142,45 +136,84 @@
 
   &__img-baby {
     position: absolute;
-    top: -380px;
+    top: -345px;
     right: 0px;
-    width: 450px;
-    height: 450px;
+    width: 400px;
+    height: 400px;
     transform: rotate(45deg);
-    overflow: hidden;
-    border-radius: 100px;
-    border: 20px solid #fff;
+    // overflow: hidden;
+    //     border-radius: 100px;
+    // border: 20px solid #fff;
 
     @media (max-width: $tablet) {
       position: relative;
       top: -80px;
       margin-left: auto;
       margin-right: auto;
-      border: none;
-      width: 250px;
-      height: 250px;
-      border-radius: 58px;
+      //  border: none;
+      width: 300px;
+      height: 300px;
+      //  border-radius: 58px;
     }
 
     &::before {
       content: url("@img/why-decor_water.png");
       position: absolute;
+      top: -185px;
+      right: -50px;
+      width: 350px;
+      height: 300px;
+      z-index: 2;
+      transform: rotate(-45deg);
+      width: 350px;
+      height: 350px;
+      z-index: 2;
+      @media (max-width: $pc) {
+        content: unset;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 105%;
+      height: 105%;
       top: 0;
-      right: 0;
+      left: 0;
+      border-radius: 100px;
+      background-color: #fff;
+      z-index: 0;
+      @media (max-width: $tablet) {
+        content: unset;
+      }
     }
 
     & img {
-      transform: translateX(-103px) translateY(-105px) rotate(-45deg);
+      transform: translateX(-116px) translateY(-127px) rotate(-45deg);
       width: 650px;
       height: 650px;
       object-fit: none;
 
       @media (max-width: $tablet) {
-        transform: translateX(-46px) translateY(-56px) rotate(-45deg);
-        width: 350px;
-        height: 350px;
+        transform: translateX(-177px) translateY(-194px) rotate(-45deg)
+          scale(0.6);
         object-fit: unset;
       }
+    }
+  }
+
+  //why__img-wrapper
+  &__img-wrapper {
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    border-radius: 100px;
+
+    @media (max-width: $tablet) {
+      width: 300px;
+      height: 300px;
     }
   }
 }

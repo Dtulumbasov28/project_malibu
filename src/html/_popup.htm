@@ -802,12 +802,18 @@
         </svg>
       </button>
       <h2 class="popup-form__title section-title">Запись на занятие</h2>
-      <form class="popup__body" action="#">
+      <form
+        data-ajax
+        data-popup-message="#form-sent"
+        class="popup__body"
+        action="request.php"
+        method="POST"
+      >
         <div class="input-group">
           <input
             required=""
             type="text"
-            name="text"
+            name="name"
             autocomplete="off"
             onkeyup="this.value = this.value.replace(/[a-z0-9+= ]/gi,'');"
             class="input popup-input-name"
@@ -828,7 +834,7 @@
           <input
             required=""
             type="text"
-            name="text"
+            name="date"
             autocomplete="off"
             maxlength="10"
             class="popup-input-date input"
@@ -851,6 +857,19 @@
           class="popup-form__button button"
         />
       </form>
+    </div>
+  </div>
+</div>
+
+<div id="form-sent" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content popup__content-sent">
+      <button data-close type="button" class="popup__close">
+        <svg>
+          <use xlink:href="@img/icons/icons.svg#svg-popup-close"></use>
+        </svg>
+      </button>
+      <div class="popup__text-sent">Ваша заявка принята, ожидайте звонка</div>
     </div>
   </div>
 </div>

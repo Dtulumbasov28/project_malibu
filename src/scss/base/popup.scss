@@ -58,6 +58,10 @@ body::after {
   .lock & {
     visibility: visible;
   }
+
+  @media (max-width: $mobileSmall) {
+    padding: 30px 10px 10px 10px;
+  }
 }
 .popup__close {
   position: absolute;
@@ -83,7 +87,7 @@ body::after {
 
   @media (max-width: $mobileSmall) {
     right: 0;
-    top: -40px;
+    top: -30px;
   }
 }
 
@@ -233,4 +237,42 @@ input:valid {
 
 .checkbox-input {
   display: none !important;
+}
+
+//
+
+.popup__content-sent {
+  max-width: 80%;
+  background-color: unset;
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    padding: unset;
+  }
+}
+.popup__text-sent {
+  font-family: $fontFamilyThick;
+  color: #fff;
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+
+  @media (max-width: $tablet) {
+    font-size: 30px;
+  }
+  @media (max-width: $mobile) {
+    font-size: 28px;
+  }
+  @media (max-width: $mobileSmall) {
+    font-size: 20px;
+  }
+}
+
+//
+
+#popup-politic {
+  bottom: unset;
+}
+#popup-offer {
+  bottom: unset;
 }

@@ -27,9 +27,11 @@
     @media (max-width: $tablet)  {
         width: unset;
     }
+
     @media (max-width: $mobile)  {
         font-size: 18px;
     }
+
     @media (max-width: $mobileSmall)  {
         font-size: 16px;
     }
@@ -42,20 +44,13 @@
   }
 }
 .block-info {
-  //   width: 60%;
   // .block-info__title
 
   &__title {
     margin-bottom: 40px;
   }
-
-  // .block-info__text
-
-  &__text {
-  }
 }
-.section-title {
-}
+
 .block-rules {
   //   width: 40%;
   // .block-rules__title

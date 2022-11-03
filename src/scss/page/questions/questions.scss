@@ -5,10 +5,6 @@
   @media (max-width: $mobile) {
     padding-top: 40px;
   }
-  // .questions__container
-
-  &__container {
-  }
 
   // .questions__title
 
@@ -39,14 +35,10 @@
     @media (max-width: $tablet) {
       width: 90%;
     }
+
     @media (max-width: $mobile) {
       width: 100%;
     }
-  }
-
-  // .questions__spollers-item
-
-  &__spollers-item {
   }
 
   // .questions__spollers-title
@@ -65,6 +57,7 @@
     @media (max-width: $mobile) {
       font-size: 16px;
     }
+
     @media (max-width: $mobileSmall) {
       margin-right: 46px;
     }
@@ -84,6 +77,7 @@
       border-radius: 50%;
       background-color: $mainColor;
       right: -90px;
+      padding-bottom: 3px;
 
       @media (max-width: $mobile) {
         font-size: 40px;
@@ -124,31 +118,9 @@
 .questionsform__title {
   margin-bottom: 40px;
 }
-.section-title {
-}
-.input-group {
-}
-.input {
-}
-.questions-input-name {
-}
-.user-label {
-}
-.questions-input-tel {
-}
-.questions-input-date {
-}
-.checkbox-block {
-}
-.checkbox-input {
-}
-.checkbox-label {
-}
 .questions-form {
   // .questions-form__button
 
   &__button {
   }
-}
-.button {
 }

@@ -5,10 +5,6 @@
   @media (max-width: $mobile) {
     padding-bottom: 86px;
   }
-  // .services__container
-
-  &__container {
-  }
 
   // .services__title
 
@@ -32,6 +28,7 @@
     @media (max-width: $pc) {
       column-gap: 20px;
     }
+
     @media (max-width: $tablet) {
       flex-direction: column;
     }
@@ -79,6 +76,7 @@
       @media (max-width: $tablet) {
         width: 70%;
       }
+
       @media (max-width: $mobile) {
         width: 95%;
       }
@@ -108,6 +106,7 @@
       @media (max-width: $tablet) {
         width: 70%;
       }
+
       @media (max-width: $mobile) {
         width: 95%;
       }
@@ -157,6 +156,7 @@
     @media (max-width: $pc) {
       padding: 0px 110px 0px 14px;
     }
+
     @media (max-width: $tablet) {
       padding: 0px 110px 0px 32px;
     }
@@ -207,8 +207,4 @@
     position: relative;
     z-index: 1;
   }
-}
-.section-title {
-}
-.circle-icon {
 }

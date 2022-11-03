@@ -27,11 +27,6 @@
     }
   }
 
-  // .header__logo
-
-  &__logo {
-  }
-
   // .header__menu
 
   &__menu {
@@ -63,11 +58,6 @@
     }
   }
 
-  // .header__item
-
-  &__item {
-  }
-
   // .header__link
 
   &__link {
@@ -77,11 +67,6 @@
       color: $mainColorHover;
       transition: all 0.2s ease;
     }
-  }
-
-  // .header__block-contacts
-
-  &__block-contacts {
   }
 }
 .header-contacts {
@@ -107,7 +92,7 @@
 
     &:hover {
       color: $mainColorHover;
-      
+
       &::before {
         transform: scale(1.1);
         transition: all 0.2s ease;
@@ -258,9 +243,6 @@
     .menu-open & {
       span {
         width: 0;
-      }
-      &::before,
-      &::after {
       }
       &::before {
         top: calc(50% - rem(1));

@@ -5,10 +5,6 @@
   @media (max-width: $mobile) {
     padding-bottom: 70px;
   }
-  // .instructors__container
-
-  &__container {
-  }
 
   // .instructors__title
 
@@ -27,32 +23,6 @@
     @media (min-width: $tablet) {
       overflow: unset !important;
     }
-  }
-
-  // .instructors__body-wrapper
-
-  &__body-wrapper {
-
-
-
-  }
-
-  // .instructors__card
-
-  &__card {
-
-  }
-
-  // .instructors__card-img
-
-  &__card-img {
-
-  }
-
-  // .instructors__card-name
-
-  &__card-name {
-
   }
 }
 .swiper-navigation-wrapper__instructors {

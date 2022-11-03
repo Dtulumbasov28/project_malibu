@@ -162,7 +162,7 @@ function initSliders() {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation, Pagination],
+      modules: [ Pagination],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
@@ -199,10 +199,10 @@ function initSliders() {
 			*/
 
       // Кнопки "влево/вправо"
-      navigation: {
-        prevEl: ".swiper-button__our-center-prev",
-        nextEl: ".swiper-button__our-center-next",
-      },
+      // navigation: {
+      //   prevEl: ".swiper-button__our-center-prev",
+      //   nextEl: ".swiper-button__our-center-next",
+      // },
 
       // Брейкпоинты
 

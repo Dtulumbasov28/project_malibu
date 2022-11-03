@@ -3,7 +3,21 @@
   // .benefits__container
 
   &__container {
+    position: relative;
     margin-top: 40px;
+
+    &::before {
+      @media (max-width: $mobile) {
+        content: url(../img/decor_bubble-small-2.png);
+        position: absolute;
+        top: -56px;
+        right: 0;
+        z-index: 1;
+      }
+      @media (max-width: $mobileSmall) {
+        right: -20px;
+      }
+    }
   }
 
   // .benefits__title
@@ -15,6 +29,8 @@
   // .benefits__body
 
   &__body {
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 36px;

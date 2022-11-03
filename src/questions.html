@@ -19,7 +19,7 @@
                   >
                     Как влияет купание малыша на его здоровье?
                   </button>
-                  <div class="questions__spollers-body">
+                  <div class="questions__spollers-body" type="button">
                     Купание детей способствует более быстрому физическому и
                     нервно-психическому развитию, снижению гипертонуса
                     сгибательных мышц, характерного для малышей первых месяцев
@@ -45,7 +45,7 @@
                   >
                     Как влияет купание малыша на его здоровье?
                   </button>
-                  <div class="questions__spollers-body">
+                  <div class="questions__spollers-body" type="button">
                     Купание детей способствует более быстрому физическому и
                     нервно-психическому развитию, снижению гипертонуса
                     сгибательных мышц, характерного для малышей первых месяцев
@@ -71,7 +71,7 @@
                   >
                     Как влияет купание малыша на его здоровье?
                   </button>
-                  <div class="questions__spollers-body">
+                  <div class="questions__spollers-body" type="button">
                     Купание детей способствует более быстрому физическому и
                     нервно-психическому развитию, снижению гипертонуса
                     сгибательных мышц, характерного для малышей первых месяцев
@@ -97,7 +97,7 @@
                   >
                     Как влияет купание малыша на его здоровье?
                   </button>
-                  <div class="questions__spollers-body">
+                  <div class="questions__spollers-body" type="button">
                     Купание детей способствует более быстрому физическому и
                     нервно-психическому развитию, снижению гипертонуса
                     сгибательных мышц, характерного для малышей первых месяцев
@@ -121,13 +121,20 @@
                   Записаться на занятие
                 </div>
 
-                <form class="questions__form-body" action="#">
+                <form
+                  data-ajax
+                  data-popup-message="#form-sent"
+                  class="questions__form-body"
+                  action="request.php"
+                  method="POST"
+                >
                   <div class="input-group">
                     <input
                       required=""
                       type="text"
-                      name="text"
+                      name="name"
                       autocomplete="off"
+                      onkeyup="this.value = this.value.replace(/[a-z0-9+= ]/gi,'');"
                       class="input questions-input-name"
                     />
                     <label class="user-label">Введите Ваше имя*</label>
@@ -140,7 +147,7 @@
                       type="tel"
                       name="tel"
                       autocomplete="off"
-                      class="input questions-input-tel"
+                      class="input questions-input-tel input-tel"
                     />
                     <label class="user-label">Введите номер телефона*</label>
                   </div>
@@ -148,19 +155,19 @@
                     <input
                       required=""
                       type="text"
-                      name="text"
+                      name="date"
                       autocomplete="off"
                       maxlength="10"
-                      class="questions-input-date input"
+                      class="questions-input-date input popup-input-date"
                     />
                     <label class="user-label">Дата рождения малыша*</label>
                   </div>
                   <div class="checkbox-block">
                     <input
-                      checked=""
+                      checked
                       type="checkbox"
                       id="checkbox-input"
-                      class="checkbox-input"
+                      class="checkbox-input checkbox-input-questions"
                     />
                     <label for="checkbox-input" class="checkbox-label"></label>
                     <span>Политика конфиденциальности</span>

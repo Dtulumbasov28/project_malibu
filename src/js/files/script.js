@@ -3,28 +3,6 @@ import { isMobile } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
-// let map = document.getElementById("map");
-// let options_map = {
-//   once: true, //запуск один раз, и удаление наблюдателя сразу
-//   passive: true,
-//   capture: true,
-// };
-// map.addEventListener("click", start_lazy_map, options_map);
-// map.addEventListener("mouseover", start_lazy_map, options_map);
-// map.addEventListener("touchstart", start_lazy_map, options_map);
-// map.addEventListener("touchmove", start_lazy_map, options_map);
-
-// let map_loaded = false;
-// function start_lazy_map() {
-//   if (!map_loaded) {
-//     let map_block = document.getElementById("map_lazy");
-//     map_loaded = true;
-//     map_block.setAttribute("src", map_block.getAttribute("src"));
-//     map_block.removeAttribute("data_src");
-//     console.log("YMAP LOADED");
-//   }
-// }
-
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(initYandexMap, 5000);
 });
@@ -98,7 +76,6 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 //--------------------- Маска ввода даты рождения
-
 var input = document.querySelectorAll(".popup-input-date")[0];
 
 var dateInputMask = function dateInputMask(elm) {

@@ -4,10 +4,7 @@
   @media (max-width: $mobile) {
     padding-bottom: 112px;
   }
-  // .our-center__container
 
-  &__container {
-  }
 
   // .our-center__title
 
@@ -22,6 +19,7 @@
     display: flex;
     align-items: center;
     column-gap: 45px;
+
     @media (max-width: $mobile) {
       flex-direction: column;
     }
@@ -37,13 +35,6 @@
     min-height: 400px;
     aspect-ratio: 16/9;
     margin-bottom: 50px;
-
-    // &::before {
-    //   content: url("@img/play-video.svg");
-    //   position: absolute;
-    //   transform-origin: 100% 100%;
-    //   z-index: 1;
-    // }
 
     @media (max-width: $tablet) {
       min-height: 320px;

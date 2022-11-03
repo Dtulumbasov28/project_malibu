@@ -5,10 +5,6 @@
   @media (max-width: $mobile) {
     padding-top: 40px;
   }
-  // .our-specialist__container
-
-  &__container {
-  }
 
   // .our-specialist__title
 
@@ -18,11 +14,6 @@
     @media (max-width: $mobile) {
       margin-bottom: 40px;
     }
-  }
-
-  // .our-specialist__body
-
-  &__body {
   }
 
   // .our-specialist__body-wrapper
@@ -35,21 +26,6 @@
     @media (max-width: $tablet) {
       display: flex !important;
     }
-  }
-
-  // .our-specialist__card
-
-  &__card {
-  }
-
-  // .our-specialist__img
-
-  &__img {
-  }
-
-  // .our-specialist__name
-
-  &__name {
   }
 }
 .swiper-navigation-wrapper__our-specialist {
