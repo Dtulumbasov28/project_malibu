@@ -141,32 +141,27 @@
     width: 400px;
     height: 400px;
     transform: rotate(45deg);
-    // overflow: hidden;
-    //     border-radius: 100px;
-    // border: 20px solid #fff;
 
     @media (max-width: $tablet) {
       position: relative;
       top: -80px;
       margin-left: auto;
       margin-right: auto;
-      //  border: none;
       width: 300px;
       height: 300px;
-      //  border-radius: 58px;
     }
 
     &::before {
-      content: url("@img/why-decor_water.png");
+      content: "";
+      background-image: url("@img/why-decor_water.png");
+      background-repeat: no-repeat;
+      background-size: 70%;
       position: absolute;
-      top: -185px;
-      right: -50px;
-      width: 350px;
-      height: 300px;
-      z-index: 2;
+      top: -212px;
+      right: -216px;
       transform: rotate(-45deg);
-      width: 350px;
-      height: 350px;
+      width: 100%;
+      height: 100%;
       z-index: 2;
       @media (max-width: $pc) {
         content: unset;
@@ -189,9 +184,10 @@
     }
 
     & img {
-      transform: translateX(-116px) translateY(-127px) rotate(-45deg);
-      width: 650px;
-      height: 650px;
+      transform: translateX(-161px) translateY(-138px) rotate(-45deg)
+        scale(0.99);
+      width: 700px;
+      height: 700px;
       object-fit: none;
 
       @media (max-width: $tablet) {
