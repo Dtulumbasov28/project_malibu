@@ -54,14 +54,37 @@
       max-width: unset;
       padding: 40px 60px 30px 50px;
     }
+    @media (max-width: $mobileSmall) {
+      padding: 20px 30px 20px 20px;
+    }
   }
 
+  // .reviews__card-human-block
+
+  &__card-human-block {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    margin-bottom: 16px;
+  }
+
+  // .reviews__card-img
+
+  &__card-img {
+    width: 80px;
+    height: 80px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
   // .reviews__card-name
 
   &__card-name {
     color: #5acfa3;
     font-weight: 600;
-    margin-bottom: 20px;
   }
 
   // .reviews__card-text
