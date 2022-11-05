@@ -54,6 +54,13 @@
     padding-bottom: 8px;
     margin-bottom: 40px;
 
+    &._spoller-active {
+      &::after {
+        transition: all 0.4s ease;
+        transform: rotate(135deg);
+      }
+    }
+
     @media (max-width: $mobile) {
       font-size: 16px;
     }
@@ -78,6 +85,7 @@
       background-color: $mainColor;
       right: -90px;
       padding-bottom: 3px;
+      transition: all 0.4s ease;
 
       @media (max-width: $mobile) {
         font-size: 40px;
