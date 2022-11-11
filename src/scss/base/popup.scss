@@ -20,10 +20,14 @@ body::after {
   left: 0;
   bottom: 0;
   right: 0;
-  padding: 30px 2%;
+  padding: 10% 2%;
   transition: visibility 0.8s ease 0s;
   visibility: hidden;
   pointer-events: none;
+
+  @media (max-width: $mobileSmall) {
+    padding: 20% 2%;
+  }
 }
 .popup_show {
   z-index: 150;
@@ -42,9 +46,6 @@ body::after {
   min-height: 100%;
   flex: 1 1 auto;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .popup__content {
   visibility: hidden;
@@ -269,10 +270,3 @@ input:valid {
 }
 
 //
-
-#popup-politic {
-  bottom: unset;
-}
-#popup-offer {
-  bottom: unset;
-}

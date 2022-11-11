@@ -29,4 +29,11 @@
   position: absolute;
   top: -9px;
   right: rem(40);
+  & .swiper-button {
+    &:hover {
+      & svg {
+        display: none;
+      }
+    }
+  }
 }

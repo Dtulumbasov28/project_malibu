@@ -70,6 +70,7 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+
   // Скролл заблокирован
   .lock & {
     overflow: hidden;
@@ -95,6 +96,11 @@ html {
   // Прижимаем footer
   > main {
     flex: 1 1 auto;
+    padding-top: 210px;
+
+    @media (max-width: $mobile) {
+      padding-top: 140px;
+    }
   }
   // Фикс для слайдеров
   > * {

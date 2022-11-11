@@ -108,12 +108,13 @@
   & img {
     width: 190px;
     height: 190px;
-
+	 transition: all 0.3s;
+	 
     @media (max-width: $pc) {
       width: 150px;
       height: 150px;
     }
-    @media (max-width: $mobileSmall) {
+    @media (max-width: $mobile) {
       width: 130px;
       height: 130px;
     }
