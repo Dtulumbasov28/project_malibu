@@ -154,6 +154,69 @@ function initSliders() {
       on: {},
     });
   }
+   // Секция "наш центр"
+   if (document.querySelector(".promotions__slider")) {
+    // Указываем скласс нужного слайдера
+    // Создаем слайдер
+    new Swiper(".promotions__slider", {
+      // Указываем скласс нужного слайдера
+      // Подключаем модули слайдера
+      // для конкретного случая
+      modules: [Pagination, Navigation],
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 60,
+      speed: 800,
+      //touchRatio: 0,
+      //simulateTouch: false,
+      //loop: true,
+      //preloadImages: false,
+      //lazy: true,
+
+      /*
+			// Эффекты
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+      // Пагинация
+      
+			pagination: {
+				el: '.swiper-pagination__promotions',
+				clickable: true,
+			},
+			
+
+      // Скроллбар
+      /*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+      // Кнопки "влево/вправо"
+      navigation: {
+        prevEl: ".swiper-button__promotions-prev",
+        nextEl: ".swiper-button__promotions-next",
+      },
+
+      // Брейкпоинты
+
+      //   breakpoints: {
+      //     320: { enabled: true },
+
+      //     992: { enabled: false },
+      //   },
+
+      // События
+      on: {},
+    });
+  }
   // Секция "отзывы наших клиентов"
   if (document.querySelector(".reviews__body")) {
     // Указываем скласс нужного слайдера

@@ -4565,6 +4565,23 @@
                 },
                 on: {}
             });
+            if (document.querySelector(".promotions__slider")) new core(".promotions__slider", {
+                modules: [ Pagination, Navigation ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 60,
+                speed: 800,
+                pagination: {
+                    el: ".swiper-pagination__promotions",
+                    clickable: true
+                },
+                navigation: {
+                    prevEl: ".swiper-button__promotions-prev",
+                    nextEl: ".swiper-button__promotions-next"
+                },
+                on: {}
+            });
             if (document.querySelector(".reviews__body")) new core(".reviews__body", {
                 modules: [ Pagination ],
                 observer: true,
@@ -6658,6 +6675,42 @@ PERFORMANCE OF THIS SOFTWARE.
             }));
         };
         dateInputMask(input);
+        function getTimeRemaining(endtime) {
+            const total = Date.parse(endtime) - Date.parse(new Date);
+            const seconds = Math.floor(total / 1e3 % 60);
+            const minutes = Math.floor(total / 1e3 / 60 % 60);
+            const hours = Math.floor(total / (1e3 * 60 * 60) % 24);
+            const days = Math.floor(total / (1e3 * 60 * 60 * 24));
+            return {
+                total,
+                days,
+                hours,
+                minutes,
+                seconds
+            };
+        }
+        function initializeClock(id, endtime) {
+            const clock = document.getElementById(id);
+            if (!clock) return false;
+            const daysSpan = clock.querySelector(".clockdiv__days");
+            const hoursSpan = clock.querySelector(".clockdiv__hours");
+            const minutesSpan = clock.querySelector(".clockdiv__minutes");
+            const secondsSpan = clock.querySelector(".clockdiv__seconds");
+            function updateClock() {
+                const t = getTimeRemaining(endtime);
+                daysSpan.innerHTML = t.days;
+                hoursSpan.innerHTML = ("0" + t.hours).slice(-2);
+                minutesSpan.innerHTML = ("0" + t.minutes).slice(-2);
+                secondsSpan.innerHTML = ("0" + t.seconds).slice(-2);
+                if (t.total <= 0) clearInterval(timeinterval);
+            }
+            updateClock();
+            const timeinterval = setInterval(updateClock, 1e3);
+        }
+        const deadline = "December 31 2022";
+        initializeClock("clockdiv1", deadline);
+        const deadline2 = "December 11 2022";
+        initializeClock("clockdiv2", deadline2);
         window["FLS"] = true;
         isWebp();
         menuInit();
